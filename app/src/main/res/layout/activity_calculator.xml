@@ -1,9 +1,234 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.tejalpatel.bmi_calculator_app.CalculatorActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+      <TableLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <TableRow>
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  style="@style/textstyle"
+                  android:text="Age"/>
+
+              <EditText
+                  android:id="@+id/etxt_age"
+                  android:maxLength="3"
+                  android:layout_width="100dp"
+                  android:layout_height="wrap_content"
+                  android:inputType="number" />
+
+          </TableRow>
+
+          <TableRow>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                   style="@style/textstyle"
+                  android:text="Gender"/>
+
+              <RadioGroup
+                  android:layout_marginLeft="10dp"
+                  android:id="@+id/Rbgender"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+                  <RadioButton
+                      android:id="@+id/rbmale"
+                      style="@style/textstyleblack"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="M" />
+
+                  <RadioButton
+                      style="@style/textstyleblack"
+                      android:id="@+id/rbfemale"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="F" />
+
+              </RadioGroup>
+
+          </TableRow>
+
+          <TableRow>
+
+              <TextView
+                  style="@style/textstyle"
+                  android:text="measurement"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content" />
+              <RadioGroup
+                  android:layout_marginLeft="10dp"
+                  android:id="@+id/Rbmeasure"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+
+                  <RadioButton
+                      android:id="@+id/rbstandard"
+                      style="@style/textstyleblack"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:checked="true"
+                      android:text="Standard" />
+
+                  <RadioButton
+                      style="@style/textstyleblack"
+                      android:id="@+id/rbmetric"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Metric" />
+
+              </RadioGroup>
+
+          </TableRow>
+
+      </TableLayout>
+
+    </LinearLayout>
+
+
+   <TableLayout
+        android:layout_marginLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textstyle"
+                android:text="Weight"/>
+            <EditText
+                android:id="@+id/etxt_weight"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/txtunit"
+                style="@style/textstyleblack"
+                android:text="Lbs"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/trstandard">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textstyle"
+                android:text="Height"/>
+            <EditText
+                android:id="@+id/etxt_heightft"
+                android:layout_marginLeft="10dp"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                style="@style/textstyleblack"
+                android:text="Ft"/>
+            <EditText
+                android:id="@+id/etxt_heightin"
+                android:layout_marginLeft="10dp"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" />
+            <TextView
+
+                style="@style/textstyleblack"
+                android:text="in"/>
+        </TableRow>
+
+       <TableRow
+           android:id="@+id/trmetric"
+           android:visibility="gone">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               style="@style/textstyle"
+               android:text="Height"/>
+           <EditText
+               android:id="@+id/etxt_height"
+               android:layout_marginLeft="10dp"
+               android:layout_width="50dp"
+               android:layout_height="wrap_content" />
+           <TextView
+               style="@style/textstyleblack"
+               android:text="cm"/>
+
+       </TableRow>
+    </TableLayout>
+
+
+
+
+
+
+   <!-- <TableLayout
+        android:visibility="gone"
+            android:id="@+id/tlbmetrix"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/textstyle"
+                    android:text="Weight"/>
+                <EditText
+                    android:id="@+id/etxt_weight"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    style="@style/textstyleblack"
+                    android:text="Kg"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/textstyle"
+                    android:text="Height"/>
+
+                <EditText
+                    android:id="@+id/etxt_height"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    style="@style/textstyleblack"
+                    android:text="Cm"/>
+            </TableRow>
+        </TableLayout>-->
+
+    <Button
+        android:gravity="center"
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txt_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txt_difference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>
